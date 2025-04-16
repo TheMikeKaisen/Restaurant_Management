@@ -1,27 +1,9 @@
 package controllers
 
-import ("github.com/gin-gonic/gin"
-
+import (
+	"go.mongodb.org/mongo-driver/v2/mongo"
+	"github.com/TheMikeKaisen/Restaurant_Management/database"
 )
 
 
-func GetOrders() gin.HandlerFunc{
-	return func(c *gin.Context) {
-
-	}
-}
-func GetOrder() gin.HandlerFunc{
-	return func(c *gin.Context) {
-
-	}
-}
-func CreateOrder() gin.HandlerFunc{
-	return func(c *gin.Context) {
-
-	}
-}
-func UpdateOrder() gin.HandlerFunc{
-	return func(c *gin.Context) {
-
-	}
-}
+var tableCollection *mongo.Collection = database.OpenCollection(database.Client, "table")
